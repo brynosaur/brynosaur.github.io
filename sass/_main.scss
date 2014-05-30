@@ -1,0 +1,39 @@
+/* Colors */
+
+$blue: #0000FF;
+$aqua: #7FFFD4;
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: $aqua;
+}
+a {
+    text-decoration: none;
+    border-bottom: 0.0625em solid $blue;
+    padding-bottom: 0.0625em;
+}
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3em 1em;
+}
+.desktop {
+    width: 100%;
+    .frame {
+        height: 26px;
+        line-height: 26px;
+        padding: 0 0.5em;
+        background-color: $blue;
+        @include border-top-left-radius(4px);
+        @include border-top-right-radius(4px);
+        i {
+            color: $aqua;
+            font-size: 0.5em;
+            margin: 0.25em;
+        }
+    }
+    .screen {
+        padding-top: 55%;
+        border: 1px solid $blue;
+    }
+}
