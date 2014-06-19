@@ -795,7 +795,7 @@ a {
 
 /* line 40, ../sass/_main.scss */
 a:hover {
-  color: darkblue;
+  color: coral;
 }
 
 @media screen and (min-width: 769px) {
