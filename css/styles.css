@@ -748,7 +748,7 @@ body {
 .box {
   position: absolute;
   top: 50%;
-  margin-top: -8em;
+  margin-top: -10em;
   padding: 1em;
   max-width: 580px;
 }
