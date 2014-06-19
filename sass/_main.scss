@@ -5,36 +5,54 @@ $aqua: #7FFFD4;
 
 body {
     font-family: 'Karla', sans-serif;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    margin-top: -10em;
+    padding: 1em;
+    max-width: 580px;
+}
+.greeting {
+}
+.email {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: $aqua;
+    @include transition(transform 350ms ease-out);
+}
+.closed {
+    @include transform(translateX(-100%));
+}
+h1, p {
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 700;
 }
 a {
     text-decoration: none;
-    border-bottom: 0.0625em solid $blue;
-    padding-bottom: 0.0625em;
     color: $blue;
+    @include transition(color 200ms ease-out);
 }
-.wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3em 1em;
+a:hover {
+    color: coral;
 }
-.desktop {
-    width: 100%;
-    .frame {
-        height: 26px;
-        line-height: 26px;
-        padding: 0 0.5em;
-        background-color: $blue;
-        @include border-top-left-radius(4px);
-        @include border-top-right-radius(4px);
-        i {
-            color: $aqua;
-            font-size: 0.5em;
-            margin: 0.25em;
-        }
+.content {
+}
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 200%;
     }
-    .screen {
-        padding-top: 55%;
-        border: 1px solid $blue;
+    .box {
+        padding: 2em 13%
+>>>>>>> 6b1601851a63e5cc11ffd93a3ffb07c83d4998ad
+    }
+    h1, p {
+        line-height: 1.4;
+        font-size: 1em;
+        font-weight: 400;
     }
 }
