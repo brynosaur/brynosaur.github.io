@@ -742,32 +742,43 @@ textarea {
 /* line 6, ../sass/_main.scss */
 body {
   font-family: 'Karla', sans-serif;
+  background-color: aquamarine;
 }
 
-/* line 9, ../sass/_main.scss */
+/* line 10, ../sass/_main.scss */
 .box {
-  position: absolute;
-  top: 50%;
-  margin-top: -10em;
-  padding: 1em;
-  max-width: 580px;
+  max-width: 600px;
+  padding: 2em 2em;
 }
 
-/* line 18, ../sass/_main.scss */
-.email {
+/* line 14, ../sass/_main.scss */
+#greeting {
+  background-color: white;
+}
+
+/* line 17, ../sass/_main.scss */
+#email {
+  text-align: center;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: aquamarine;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-transition: -webkit-transform 350ms ease-out;
   -moz-transition: -moz-transform 350ms ease-out;
   -o-transition: -o-transform 350ms ease-out;
   transition: transform 350ms ease-out;
 }
+/* line 29, ../sass/_main.scss */
+#email a {
+  color: white;
+}
 
-/* line 27, ../sass/_main.scss */
+/* line 33, ../sass/_main.scss */
 .closed {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -776,14 +787,14 @@ body {
   transform: translateX(-100%);
 }
 
-/* line 30, ../sass/_main.scss */
+/* line 36, ../sass/_main.scss */
 h1, p {
   line-height: 1.4;
   font-size: 1em;
   font-weight: 700;
 }
 
-/* line 35, ../sass/_main.scss */
+/* line 41, ../sass/_main.scss */
 a {
   text-decoration: none;
   color: blue;
@@ -793,23 +804,18 @@ a {
   transition: color 200ms ease-out;
 }
 
-/* line 40, ../sass/_main.scss */
+/* line 46, ../sass/_main.scss */
 a:hover {
   color: coral;
 }
 
 @media screen and (min-width: 769px) {
-  /* line 46, ../sass/_main.scss */
+  /* line 50, ../sass/_main.scss */
   body {
     font-size: 200%;
   }
 
-  /* line 49, ../sass/_main.scss */
-  .box {
-    padding: 2em 13%;
-  }
-
-  /* line 52, ../sass/_main.scss */
+  /* line 53, ../sass/_main.scss */
   h1, p {
     line-height: 1.4;
     font-size: 1em;

@@ -5,24 +5,30 @@ $aqua: #7FFFD4;
 
 body {
     font-family: 'Karla', sans-serif;
+    background-color: $aqua;
 }
 .box {
-    position: absolute;
-    top: 50%;
-    margin-top: -10em;
-    padding: 1em;
-    max-width: 580px;
+    max-width: 600px;
+    padding: 2em 2em;
 }
-.greeting {
+#greeting {
+    background-color: white;
 }
-.email {
+#email {
+    text-align: center;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $aqua;
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include transition(transform 350ms ease-out);
+    a {
+        color: white;
+    }
 }
 .closed {
     @include transform(translateX(-100%));
@@ -43,10 +49,6 @@ a:hover {
 @media screen and (min-width: 769px) {
     body {
         font-size: 200%;
-    }
-    .box {
-        padding: 2em 13%
->>>>>>> 6b1601851a63e5cc11ffd93a3ffb07c83d4998ad
     }
     h1, p {
         line-height: 1.4;
