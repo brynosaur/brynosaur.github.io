@@ -752,6 +752,18 @@ body {
 }
 
 /* line 14, ../sass/_main.scss */
+#greeting {
+  color: blue;
+}
+
+/* line 17, ../sass/_main.scss */
+.twitter {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}
+
+/* line 22, ../sass/_main.scss */
 #email {
   text-align: center;
   position: fixed;
@@ -768,12 +780,12 @@ body {
   -o-transition: -o-transform 350ms ease-out;
   transition: transform 350ms ease-out;
 }
-/* line 26, ../sass/_main.scss */
+/* line 34, ../sass/_main.scss */
 #email a {
   color: white;
 }
 
-/* line 30, ../sass/_main.scss */
+/* line 38, ../sass/_main.scss */
 .closed {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -782,14 +794,14 @@ body {
   transform: translateX(-100%);
 }
 
-/* line 33, ../sass/_main.scss */
+/* line 41, ../sass/_main.scss */
 h1, p {
   line-height: 1.4;
   font-size: 1em;
   font-weight: 700;
 }
 
-/* line 38, ../sass/_main.scss */
+/* line 46, ../sass/_main.scss */
 a {
   text-decoration: none;
   color: blue;
@@ -799,18 +811,18 @@ a {
   transition: color 200ms ease-out;
 }
 
-/* line 43, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 a:hover {
   color: coral;
 }
 
 @media screen and (min-width: 769px) {
-  /* line 47, ../sass/_main.scss */
+  /* line 55, ../sass/_main.scss */
   body {
     font-size: 200%;
   }
 
-  /* line 50, ../sass/_main.scss */
+  /* line 58, ../sass/_main.scss */
   h1, p {
     line-height: 1.4;
     font-size: 1em;
