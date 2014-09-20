@@ -25,6 +25,18 @@ footer {
     right: 2em;
     bottom: 2em;
 }
+.trigger {
+  display: block;
+  &:hover {
+    cursor: w-resize;
+  }
+}
+.sunjacket {
+  display: block;
+  &:hover {
+    cursor: alias;
+  }
+}
 #email {
     text-align: center;
     position: fixed;
@@ -37,6 +49,9 @@ footer {
     align-items: center;
     justify-content: center;
     @include transition(transform 350ms ease-out);
+    &:hover {
+      cursor: e-resize;
+    }
     p {
         color: white;
     }
