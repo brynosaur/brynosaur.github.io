@@ -4,144 +4,93 @@ $blue: #0000FF;
 $aqua: #7FFFD4;
 
 body {
-    font-family: 'Karla', sans-serif;
-    background-color: $aqua;
+  font-family: "Karla", Arial, sans-serif;
+  font-weight: 700;
+  color: #222;
 }
-h1, h2, h3, h4 {
-    font-weight: normal;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1.5;
 }
-.box {
-    max-width: 600px;
-    padding: 0 1em;
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../images/fuzz.jpg");
+  background-size: cover;
+  @include animation(wave 30s infinite alternate);
 }
-#greeting {
-    color: $blue;
+.banner {
+  height: 100%;
+  margin-left: 12%;
+  display: table;
+  vertical-align: middle;
 }
-header {
-    color: $blue;
+.center {
+  display: table-cell;
+  vertical-align: middle;
 }
-footer {
-    position: fixed;
-    right: 2em;
-    bottom: 2em;
+.card {
+  padding: 4.25em 2.375em 4.375em 2.25em;
+  margin-bottom: 3em;
+  background: white;
+  box-shadow: 6px 6px 0px #50E3C2, 6px 6px 12px rgba(0,0,0,0.25);
+  @include transition(all 200ms ease);
+  @include animation(fadein 1.5s);
 }
-.trigger {
-  display: block;
-  &:hover {
-    cursor: w-resize;
-  }
+.card:hover {
+  background-color: #50E3C2;
+  box-shadow: 6px 6px 0px #222, 6px 6px 12px rgba(0,0,0,0.25);
 }
-.sunjacket {
-  display: block;
-  &:hover {
-    cursor: alias;
-  }
+.logo {
+  margin-bottom: 3em;
 }
-#email {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include transition(transform 350ms ease-out);
-    &:hover {
-      cursor: e-resize;
-    }
-    p {
-        color: white;
-    }
+.logo:hover {
+  @include animation(rotate 1s);
+  cursor: none;
 }
-.closed {
-    @include transform(translateX(-100%));
+.contact {
+  display: inline-block;
+  margin-top: 3em;
+  color: #222;
+  text-decoration: none;
 }
-h1, p {
-    line-height: 1.4;
-    font-size: 1em;
-    font-weight: 700;
+.contact:hover {
+  text-decoration: underline;
 }
-a {
-    text-decoration: none;
-    color: $blue;
-    @include transition(color 200ms ease-out);
-}
-a:hover {
-    color: coral;
-}
-@media screen and (min-width: 769px) {
-    body {
-        font-size: 200%;
-    }
-    h1, p {
-        line-height: 1.4;
-        font-size: 1em;
-        font-weight: 400;
-    }
-    .box {
-        padding: 0 2em;
-    }
-}
-.resume-section {
-  padding: 1.7em 0;
-  border-bottom: 4px solid blue;
-  &:last-of-type {
-    border-bottom: none;
-  }
-  &:first-of-type {
-    border-top: 4px solid blue;
-    margin-top: 2em;
-  }
-  h2 {
-    font-size: 1em;
-    font-weight: 700;
-  }
-}
-.item {
-  margin-bottom: 1.7em;
-  padding: 0.25em 0;
-}
-.item:last-of-type {
-  margin-bottom: 0.83em;
-}
-.item h3 {
-font-weight: 700;
-}
-.item h3, .item h4 {
-  margin-top: 0;
-  margin-bottom: 0.25em;
-}
-.item time, .item p {
-  font-style: italic;
+h1, h2, p, a {
+  font-size: 0.875em;
   margin: 0;
 }
-.item address {
-  font-size: 0.875em;
-  line-height: 1.4;
-  margin-top: 0.83em;
-}
-.item ul {
-  list-style-type: disc;
-  font-size: 0.875em;
-  line-height: 1.4;
-  padding-left: 1.5em;
-  margin-bottom: 1.7em;
-}
-.item li {
-  font-style: italic;
-  &:before {
-    content: \f0e7;
+@include keyframes(wave) {
+  from {
+    @include scale(1);
+  }
+  to {
+    @include scale(1.1);
   }
 }
-.item label {
-  color: rgba(0,0,0,0.25);
-  margin-left: 0.5em;
+@include keyframes(fadein) {
+  from {
+    @include opacity(0);
+  }
+  to {
+    @include opacity(1);
+  }
 }
-.hide {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+
+@include keyframes(rotate) {
+  from {
+    @include rotateY(0deg);
+  }
+  to {
+    @include rotateY(360deg);
+  }
 }
