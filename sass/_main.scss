@@ -1,12 +1,13 @@
 /* Colors */
 
-$blue: #0000FF;
 $aqua: #7FFFD4;
+$gray: #222222;
+$shadow: rgba(0,0,0,0.25);
 
 body {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
-  color: #222;
+  color: $gray;
 }
 body, html {
   margin: 0;
@@ -41,13 +42,13 @@ body, html {
   padding: 4.25em 2.375em 4.375em 2.25em;
   margin-bottom: 3em;
   background: white;
-  box-shadow: 6px 6px 0px #50E3C2, 6px 6px 12px rgba(0,0,0,0.25);
+  @include box-shadow(6px 6px 0px $aqua, 6px 6px 12px $shadow);
   @include transition(all 200ms ease);
   @include animation(fadein 1.5s);
 }
 .card:hover {
-  background-color: #50E3C2;
-  box-shadow: 6px 6px 0px #222, 6px 6px 12px rgba(0,0,0,0.25);
+  background-color: $aqua;
+  box-shadow: 6px 6px 0px $gray, 6px 6px 12px $shadow;
 }
 .logo {
   margin-bottom: 3em;
@@ -59,11 +60,15 @@ body, html {
 .contact {
   display: inline-block;
   margin-top: 3em;
-  color: #222;
+  color: $gray;
   text-decoration: none;
+  padding: 0.375em 0.5em;
+  border: 1px solid $gray;
+  @include transition(all 200ms ease-out);
 }
 .contact:hover {
-  text-decoration: underline;
+  color: $aqua;
+  background-color: $gray;
 }
 h1, h2, p, a {
   font-size: 0.875em;

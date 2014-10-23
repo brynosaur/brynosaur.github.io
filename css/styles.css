@@ -738,14 +738,14 @@ textarea {
   }
 }
 /* Colors */
-/* line 6, ../sass/_main.scss */
+/* line 7, ../sass/_main.scss */
 body {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
-  color: #222;
+  color: #222222;
 }
 
-/* line 11, ../sass/_main.scss */
+/* line 12, ../sass/_main.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -753,7 +753,7 @@ body, html {
   line-height: 1.5;
 }
 
-/* line 17, ../sass/_main.scss */
+/* line 18, ../sass/_main.scss */
 .background {
   position: fixed;
   z-index: -1;
@@ -770,7 +770,7 @@ body, html {
   animation: wave 30s infinite alternate;
 }
 
-/* line 30, ../sass/_main.scss */
+/* line 31, ../sass/_main.scss */
 .banner {
   height: 100%;
   margin-left: 12%;
@@ -778,18 +778,20 @@ body, html {
   vertical-align: middle;
 }
 
-/* line 36, ../sass/_main.scss */
+/* line 37, ../sass/_main.scss */
 .center {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 40, ../sass/_main.scss */
+/* line 41, ../sass/_main.scss */
 .card {
   padding: 4.25em 2.375em 4.375em 2.25em;
   margin-bottom: 3em;
   background: white;
-  box-shadow: 6px 6px 0px #50E3C2, 6px 6px 12px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 6px 6px 0px #7FFFD4, 6px 6px 12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 6px 6px 0px #7FFFD4, 6px 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 6px 6px 0px #7FFFD4, 6px 6px 12px rgba(0, 0, 0, 0.25);
   -moz-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   -webkit-transition: all 200ms ease;
@@ -799,18 +801,18 @@ body, html {
   animation: fadein 1.5s;
 }
 
-/* line 48, ../sass/_main.scss */
+/* line 49, ../sass/_main.scss */
 .card:hover {
-  background-color: #50E3C2;
-  box-shadow: 6px 6px 0px #222, 6px 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #7FFFD4;
+  box-shadow: 6px 6px 0px #222222, 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* line 52, ../sass/_main.scss */
+/* line 53, ../sass/_main.scss */
 .logo {
   margin-bottom: 3em;
 }
 
-/* line 55, ../sass/_main.scss */
+/* line 56, ../sass/_main.scss */
 .logo:hover {
   -moz-animation: rotate 1s;
   -webkit-animation: rotate 1s;
@@ -818,20 +820,27 @@ body, html {
   cursor: none;
 }
 
-/* line 59, ../sass/_main.scss */
+/* line 60, ../sass/_main.scss */
 .contact {
   display: inline-block;
   margin-top: 3em;
-  color: #222;
+  color: #222222;
   text-decoration: none;
+  padding: 0.375em 0.5em;
+  border: 1px solid #222222;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
 }
 
-/* line 65, ../sass/_main.scss */
+/* line 69, ../sass/_main.scss */
 .contact:hover {
-  text-decoration: underline;
+  color: #7FFFD4;
+  background-color: #222222;
 }
 
-/* line 68, ../sass/_main.scss */
+/* line 73, ../sass/_main.scss */
 h1, h2, p, a {
   font-size: 0.875em;
   margin: 0;
