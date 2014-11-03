@@ -1,13 +1,20 @@
 /* Colors */
 
-$aqua: #7FFFD4;
-$gray: #222222;
-$shadow: rgba(0,0,0,0.25);
+$aqua: rgb(127,255,212);
+$gray-dk: rgb(34,34,34);
+$gray-lt: rgb(204,204,204);
+$gray-fa: rgb(245,245,245);
+$shadow-blur: rgba(0,0,0,0.25);
+$shadow-block: rgba(0,0,0,0.1);
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
-  color: $gray;
+  color: $gray-dk;
 }
 body, html {
   margin: 0;
@@ -42,13 +49,13 @@ body, html {
   padding: 4.25em 2.375em 4.375em 2.25em;
   margin-bottom: 3em;
   background: white;
-  @include box-shadow(6px 6px 0px $aqua, 6px 6px 12px $shadow);
+  @include box-shadow(6px 6px 0px $aqua, 6px 6px 12px $shadow-blur);
   @include transition(all 200ms ease);
   @include animation(fadein 1.5s);
 }
 .card:hover {
   background-color: $aqua;
-  box-shadow: 6px 6px 0px $gray, 6px 6px 12px $shadow;
+  box-shadow: 6px 6px 0px $gray-dk, 6px 6px 12px $shadow-blur;
 }
 .logo {
   margin-bottom: 3em;
@@ -60,15 +67,15 @@ body, html {
 .contact {
   display: inline-block;
   margin-top: 3em;
-  color: $gray;
+  color: $gray-dk;
   text-decoration: none;
   padding: 0.375em 0.5em;
-  border: 1px solid $gray;
+  border: 1px solid $gray-dk;
   @include transition(all 200ms ease-out);
 }
 .contact:hover {
   color: $aqua;
-  background-color: $gray;
+  background-color: $gray-dk;
 }
 h1, h2, p, a {
   font-size: 0.875em;
@@ -97,5 +104,35 @@ h1, h2, p, a {
   }
   to {
     @include rotateY(360deg);
+  }
+}
+.content {
+  background: white;
+}
+.project {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6em 8.3984375%;
+}
+.image {
+  max-width: 1600px;
+  text-align: center;
+}
+.device {
+  .desktop, .phone {
+    @include box-shadow(6px 6px 0px $shadow-block);
+  }
+  .desktop {
+    border: 6px solid $gray-lt;
+    padding-top: 28px;
+    background: url("../images/buttons.svg") no-repeat top left $gray-lt;
+  }
+  .phone {
+    margin: 0 auto;
+    max-width: 244px;
+    border: 6px solid $gray-dk;
+    padding: 44px 0;
+    background: $gray-dk;
+    @include border-radius(18px);
   }
 }
