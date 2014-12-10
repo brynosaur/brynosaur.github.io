@@ -795,6 +795,7 @@ body, html {
   padding: 4.25em 2.375em 4.375em 2.25em;
   margin-bottom: 3em;
   background: white;
+  width: 200px;
   -moz-box-shadow: 6px 6px 0px aquamarine, 6px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 6px 6px 0px aquamarine, 6px 6px 12px rgba(0, 0, 0, 0.25);
   box-shadow: 6px 6px 0px aquamarine, 6px 6px 12px rgba(0, 0, 0, 0.25);
@@ -807,18 +808,18 @@ body, html {
   animation: fadein 1.5s;
 }
 
-/* line 56, ../sass/_main.scss */
+/* line 57, ../sass/_main.scss */
 .card:hover {
   background-color: aquamarine;
   box-shadow: 6px 6px 0px #222222, 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* line 60, ../sass/_main.scss */
+/* line 61, ../sass/_main.scss */
 .logo {
   margin-bottom: 3em;
 }
 
-/* line 63, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .logo:hover {
   -moz-animation: rotate 1s;
   -webkit-animation: rotate 1s;
@@ -826,7 +827,7 @@ body, html {
   cursor: none;
 }
 
-/* line 67, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
 .contact {
   display: inline-block;
   margin-top: 3em;
@@ -840,13 +841,13 @@ body, html {
   transition: all 200ms ease-out;
 }
 
-/* line 76, ../sass/_main.scss */
+/* line 77, ../sass/_main.scss */
 .contact:hover {
   color: aquamarine;
   background-color: #222222;
 }
 
-/* line 80, ../sass/_main.scss */
+/* line 81, ../sass/_main.scss */
 h1, h2, p, a {
   font-size: 0.875em;
   margin: 0;
@@ -942,37 +943,37 @@ h1, h2, p, a {
     transform: rotateY(360deg);
   }
 }
-/* line 109, ../sass/_main.scss */
+/* line 110, ../sass/_main.scss */
 .content {
   background: white;
 }
 
-/* line 112, ../sass/_main.scss */
+/* line 113, ../sass/_main.scss */
 .project {
   max-width: 1200px;
   margin: 0 auto;
   padding: 6em 8.3984375%;
 }
 
-/* line 117, ../sass/_main.scss */
+/* line 118, ../sass/_main.scss */
 .image {
   max-width: 1600px;
   text-align: center;
 }
 
-/* line 122, ../sass/_main.scss */
+/* line 123, ../sass/_main.scss */
 .device .desktop, .device .phone {
   -moz-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 125, ../sass/_main.scss */
+/* line 126, ../sass/_main.scss */
 .device .desktop {
   border: 6px solid #cccccc;
   padding-top: 28px;
   background: url("../images/buttons.svg") no-repeat top left #cccccc;
 }
-/* line 130, ../sass/_main.scss */
+/* line 131, ../sass/_main.scss */
 .device .phone {
   margin: 0 auto;
   max-width: 244px;
