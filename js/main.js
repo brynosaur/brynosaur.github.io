@@ -1,4 +1,20 @@
 (function () {
+
+  /* Smooth Scroll */
+
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
   var THRESHOLD_BOTTOM = 150;
   var THRESHOLD_TOP = 150;
 
@@ -53,11 +69,11 @@
         },
         success: function(data) {
           $contactForm.find('.alert--loading').hide();
-          $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+          $contactForm.append('<div class="alert alert--success">Sent! I\'ll be in touch soon.</div>');
         },
         error: function(err) {
           $contactForm.find('.alert--loading').hide();
-          $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+          $contactForm.append('<div class="alert alert--error">Oops, there was an error.</div>');
         }
       });
 

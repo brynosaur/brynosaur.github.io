@@ -29,6 +29,15 @@ body, html {
   height: 100%;
   line-height: 1.5;
 }
+nav {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  a {
+    color: $aqua;
+    border-bottom: 2px solid $aqua;
+  }
+}
 .background {
   position: fixed;
   z-index: -1;
@@ -47,6 +56,9 @@ body, html {
   margin-left: 12%;
   display: table;
   vertical-align: middle;
+  &.half-height {
+    height: 50%;
+  }
 }
 .center {
   display: table-cell;
@@ -88,6 +100,13 @@ body, html {
 h1, h2, p, a {
   font-size: 0.875em;
   margin: 0;
+}
+a {
+  color: $gray-dk;
+  text-decoration: none;
+  border-bottom: 2px solid $gray-dk;
+  @include transition(all 200ms ease-out);
+
 }
 @include keyframes(wave) {
   from {
@@ -147,6 +166,12 @@ h1, h2, p, a {
 .form {
   @extend .project;
   background-color: $aqua;
+  hgroup {
+    margin-bottom: 4em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
 }
 .form-item {
   margin-bottom: 1.75em;
@@ -195,4 +220,7 @@ button {
   &:focus {
     outline: none;
   }
+}
+.alert {
+  margin-top: 1em;
 }
