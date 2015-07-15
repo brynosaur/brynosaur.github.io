@@ -1,20 +1,27 @@
 /* Colors */
 
-$aqua: rgb(127,255,212);
+$aqua: rgb(80,227,194);
 $gray-dk: rgb(34,34,34);
 $gray-lt: rgb(204,204,204);
 $gray-fa: rgb(245,245,245);
 $shadow-blur: rgba(0,0,0,0.25);
 $shadow-block: rgba(0,0,0,0.1);
+$error: rgb(250,125,125);
 
+$small: "screen and (max-width: 480px)";
+
+
+@mixin karla {
+  font-family: "Karla", Arial, sans-serif;
+  font-weight: 700;
+  color: $gray-dk;
+}
 img {
   max-width: 100%;
   height: auto;
 }
 body {
-  font-family: "Karla", Arial, sans-serif;
-  font-weight: 700;
-  color: $gray-dk;
+  @include karla;
 }
 body, html {
   margin: 0;
@@ -135,5 +142,57 @@ h1, h2, p, a {
     padding: 44px 0;
     background: $gray-dk;
     @include border-radius(18px);
+  }
+}
+.form {
+  @extend .project;
+  background-color: $aqua;
+}
+.form-item {
+  margin-bottom: 1.75em;
+}
+label {
+  display: block;
+  font-size: 1.75em;
+  margin-bottom: 0.25em;
+  @media #{$small} {
+    font-size: 1em;
+  }
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  @include karla;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.25em;
+  border: none;
+  border-bottom: 7px solid $gray-dk;
+  background-color: rgba(0,0,0,0.02);
+  @include transition(background-color 400ms ease, border 200ms ease);
+  &:focus {
+    outline: none;
+    background-color: rgba(255,255,255,0.1);
+  }
+  &.error {
+    border-bottom: 7px solid $error;
+  }
+}
+/* Disable ugly yella -webkit autofill */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #4EDEBE inset;
+}
+button {
+  @include karla;
+  padding: 1em 2em;
+  border: 7px solid $gray-dk;
+  background-color: rgba(0,0,0,0.02);
+  @include transition(background-color 200ms ease);
+  &:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  &:focus {
+    outline: none;
   }
 }

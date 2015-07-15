@@ -103,6 +103,28 @@ layout: default
 
 </div>
 
+<div class="form">
+
+  <form id="contact-form" action="//formspree.io/bk@bryankveton.com" method="post">
+    <div class="form-item">
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+    </div>
+    <div class="form-item">
+      <label for="email">Email:</label>
+      <input type="email" name="_replyto">
+    </div>
+    <div class="form-item">
+      <label for="message">Message:</label>
+      <textarea rows="5" name="message"></textarea>
+    </div>
+    <!-- CONFIG -->
+    <input type="hidden" name="_subject" value="Message from bryankveton.com" />
+    <!-- /CONFIG -->
+    <button type="submit">Send</button>
+  </form>
+</div>
+
 <div class="banner">
   <div class="center">
     <div class="card">
