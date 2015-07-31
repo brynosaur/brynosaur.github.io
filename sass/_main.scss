@@ -1,6 +1,7 @@
 /* Colors */
 
 $aqua: rgb(80,227,194);
+$white: rgb(255,255,255);
 $gray-dk: rgb(34,34,34);
 $gray-lt: rgb(204,204,204);
 $gray-fa: rgb(245,245,245);
@@ -37,6 +38,15 @@ nav {
     color: $aqua;
     border-bottom: 2px solid $aqua;
   }
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.ben-overlay {
+  position: absolute;
+  top: 28px;
+  left: 0;
 }
 .background {
   position: fixed;
@@ -134,7 +144,7 @@ a {
   }
 }
 .content {
-  background: white;
+  background: $white;
 }
 .project {
   max-width: 1200px;
@@ -147,6 +157,7 @@ a {
 }
 .device {
   .desktop, .phone {
+    position: relative;
     @include box-shadow(6px 6px 0px $shadow-block);
   }
   .desktop {

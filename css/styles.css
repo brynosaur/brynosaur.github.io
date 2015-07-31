@@ -738,20 +738,20 @@ textarea {
   }
 }
 /* Colors */
-/* line 19, ../sass/_main.scss */
+/* line 20, ../sass/_main.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 23, ../sass/_main.scss */
+/* line 24, ../sass/_main.scss */
 body {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
   color: #222222;
 }
 
-/* line 26, ../sass/_main.scss */
+/* line 27, ../sass/_main.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -759,19 +759,32 @@ body, html {
   line-height: 1.5;
 }
 
-/* line 32, ../sass/_main.scss */
+/* line 33, ../sass/_main.scss */
 nav {
   position: fixed;
   top: 2%;
   right: 2%;
 }
-/* line 36, ../sass/_main.scss */
+/* line 37, ../sass/_main.scss */
 nav a {
   color: #50e3c2;
   border-bottom: 2px solid #50e3c2;
 }
 
-/* line 41, ../sass/_main.scss */
+/* line 42, ../sass/_main.scss */
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* line 46, ../sass/_main.scss */
+.ben-overlay {
+  position: absolute;
+  top: 28px;
+  left: 0;
+}
+
+/* line 51, ../sass/_main.scss */
 .background {
   position: fixed;
   z-index: -1;
@@ -788,25 +801,25 @@ nav a {
   animation: wave 30s infinite alternate;
 }
 
-/* line 54, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .banner {
   height: 100%;
   margin-left: 12%;
   display: table;
   vertical-align: middle;
 }
-/* line 59, ../sass/_main.scss */
+/* line 69, ../sass/_main.scss */
 .banner.half-height {
   height: 50%;
 }
 
-/* line 63, ../sass/_main.scss */
+/* line 73, ../sass/_main.scss */
 .center {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 67, ../sass/_main.scss */
+/* line 77, ../sass/_main.scss */
 .card {
   padding: 4.25em 2.375em 4.375em 2.25em;
   margin-bottom: 3em;
@@ -824,18 +837,18 @@ nav a {
   animation: fadein 1.5s;
 }
 
-/* line 76, ../sass/_main.scss */
+/* line 86, ../sass/_main.scss */
 .card:hover {
   background-color: #50e3c2;
   box-shadow: 6px 6px 0px #222222, 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* line 80, ../sass/_main.scss */
+/* line 90, ../sass/_main.scss */
 .logo {
   margin-bottom: 3em;
 }
 
-/* line 83, ../sass/_main.scss */
+/* line 93, ../sass/_main.scss */
 .logo:hover {
   -moz-animation: rotate 1s;
   -webkit-animation: rotate 1s;
@@ -843,7 +856,7 @@ nav a {
   cursor: none;
 }
 
-/* line 87, ../sass/_main.scss */
+/* line 97, ../sass/_main.scss */
 .contact {
   display: inline-block;
   margin-top: 3em;
@@ -857,19 +870,19 @@ nav a {
   transition: all 200ms ease-out;
 }
 
-/* line 96, ../sass/_main.scss */
+/* line 106, ../sass/_main.scss */
 .contact:hover {
   color: #50e3c2;
   background-color: #222222;
 }
 
-/* line 100, ../sass/_main.scss */
+/* line 110, ../sass/_main.scss */
 h1, h2, p, a {
   font-size: 0.875em;
   margin: 0;
 }
 
-/* line 104, ../sass/_main.scss */
+/* line 114, ../sass/_main.scss */
 a {
   color: #222222;
   text-decoration: none;
@@ -970,37 +983,38 @@ a {
     transform: rotateY(360deg);
   }
 }
-/* line 136, ../sass/_main.scss */
+/* line 146, ../sass/_main.scss */
 .content {
   background: white;
 }
 
-/* line 139, ../sass/_main.scss */
+/* line 149, ../sass/_main.scss */
 .project, .form {
   max-width: 1200px;
   margin: 0 auto;
   padding: 6em 8.3984375%;
 }
 
-/* line 144, ../sass/_main.scss */
+/* line 154, ../sass/_main.scss */
 .image {
   max-width: 1600px;
   text-align: center;
 }
 
-/* line 149, ../sass/_main.scss */
+/* line 159, ../sass/_main.scss */
 .device .desktop, .device .phone {
+  position: relative;
   -moz-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 152, ../sass/_main.scss */
+/* line 163, ../sass/_main.scss */
 .device .desktop {
   border: 6px solid #cccccc;
   padding-top: 28px;
   background: url("../images/buttons.svg") no-repeat top left #cccccc;
 }
-/* line 157, ../sass/_main.scss */
+/* line 168, ../sass/_main.scss */
 .device .phone {
   margin: 0 auto;
   max-width: 244px;
@@ -1012,38 +1026,38 @@ a {
   border-radius: 18px;
 }
 
-/* line 166, ../sass/_main.scss */
+/* line 177, ../sass/_main.scss */
 .form {
   background-color: #50e3c2;
 }
-/* line 169, ../sass/_main.scss */
+/* line 180, ../sass/_main.scss */
 .form hgroup {
   margin-bottom: 4em;
 }
-/* line 172, ../sass/_main.scss */
+/* line 183, ../sass/_main.scss */
 .form h2 {
   font-size: 1.75em;
 }
 
-/* line 176, ../sass/_main.scss */
+/* line 187, ../sass/_main.scss */
 .form-item {
   margin-bottom: 1.75em;
 }
 
-/* line 179, ../sass/_main.scss */
+/* line 190, ../sass/_main.scss */
 label {
   display: block;
   font-size: 1.75em;
   margin-bottom: 0.25em;
 }
 @media screen and (max-width: 480px) {
-  /* line 179, ../sass/_main.scss */
+  /* line 190, ../sass/_main.scss */
   label {
     font-size: 1em;
   }
 }
 
-/* line 187, ../sass/_main.scss */
+/* line 198, ../sass/_main.scss */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -1062,14 +1076,14 @@ textarea {
   -webkit-transition: background-color 400ms ease, border 200ms ease;
   transition: background-color 400ms ease, border 200ms ease;
 }
-/* line 199, ../sass/_main.scss */
+/* line 210, ../sass/_main.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 203, ../sass/_main.scss */
+/* line 214, ../sass/_main.scss */
 input[type="text"].error,
 input[type="email"].error,
 textarea.error {
@@ -1077,12 +1091,12 @@ textarea.error {
 }
 
 /* Disable ugly yella -webkit autofill */
-/* line 208, ../sass/_main.scss */
+/* line 219, ../sass/_main.scss */
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #4EDEBE inset;
 }
 
-/* line 211, ../sass/_main.scss */
+/* line 222, ../sass/_main.scss */
 button {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
@@ -1095,16 +1109,16 @@ button {
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
 }
-/* line 217, ../sass/_main.scss */
+/* line 228, ../sass/_main.scss */
 button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 220, ../sass/_main.scss */
+/* line 231, ../sass/_main.scss */
 button:focus {
   outline: none;
 }
 
-/* line 224, ../sass/_main.scss */
+/* line 235, ../sass/_main.scss */
 .alert {
   margin-top: 1em;
 }
