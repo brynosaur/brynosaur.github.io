@@ -799,7 +799,7 @@ video {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../images/fuzz.jpg");
+  background: url("../images/foam.gif");
   background-size: cover;
   -moz-animation: wave 30s infinite alternate;
   -webkit-animation: wave 30s infinite alternate;
@@ -999,27 +999,33 @@ a {
   margin: 0 auto;
   padding: 6em 8.3984375%;
 }
+@media screen and (max-width: 480px) {
+  /* line 152, ../sass/_main.scss */
+  .project, .form {
+    padding: 3em 5%;
+  }
+}
 
-/* line 157, ../sass/_main.scss */
+/* line 160, ../sass/_main.scss */
 .image {
   max-width: 1600px;
   text-align: center;
 }
 
-/* line 162, ../sass/_main.scss */
+/* line 165, ../sass/_main.scss */
 .device .desktop, .device .phone {
   position: relative;
   -moz-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 166, ../sass/_main.scss */
+/* line 169, ../sass/_main.scss */
 .device .desktop {
   border: 6px solid #cccccc;
   padding-top: 28px;
   background: url("../images/buttons.svg") no-repeat top left #cccccc;
 }
-/* line 171, ../sass/_main.scss */
+/* line 174, ../sass/_main.scss */
 .device .phone {
   margin: 0 auto;
   max-width: 244px;
@@ -1031,38 +1037,38 @@ a {
   border-radius: 18px;
 }
 
-/* line 180, ../sass/_main.scss */
+/* line 183, ../sass/_main.scss */
 .form {
   background-color: #50e3c2;
 }
-/* line 183, ../sass/_main.scss */
+/* line 186, ../sass/_main.scss */
 .form hgroup {
   margin-bottom: 4em;
 }
-/* line 186, ../sass/_main.scss */
+/* line 189, ../sass/_main.scss */
 .form h2 {
   font-size: 1.75em;
 }
 
-/* line 190, ../sass/_main.scss */
+/* line 193, ../sass/_main.scss */
 .form-item {
   margin-bottom: 1.75em;
 }
 
-/* line 193, ../sass/_main.scss */
+/* line 196, ../sass/_main.scss */
 label {
   display: block;
   font-size: 1.75em;
   margin-bottom: 0.25em;
 }
 @media screen and (max-width: 480px) {
-  /* line 193, ../sass/_main.scss */
+  /* line 196, ../sass/_main.scss */
   label {
     font-size: 1em;
   }
 }
 
-/* line 201, ../sass/_main.scss */
+/* line 204, ../sass/_main.scss */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -1081,14 +1087,14 @@ textarea {
   -webkit-transition: background-color 400ms ease, border 200ms ease;
   transition: background-color 400ms ease, border 200ms ease;
 }
-/* line 213, ../sass/_main.scss */
+/* line 216, ../sass/_main.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 217, ../sass/_main.scss */
+/* line 220, ../sass/_main.scss */
 input[type="text"].error,
 input[type="email"].error,
 textarea.error {
@@ -1096,12 +1102,12 @@ textarea.error {
 }
 
 /* Disable ugly yella -webkit autofill */
-/* line 222, ../sass/_main.scss */
+/* line 225, ../sass/_main.scss */
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #4EDEBE inset;
 }
 
-/* line 225, ../sass/_main.scss */
+/* line 228, ../sass/_main.scss */
 button {
   font-family: "Karla", Arial, sans-serif;
   font-weight: 700;
@@ -1114,16 +1120,16 @@ button {
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
 }
-/* line 231, ../sass/_main.scss */
+/* line 234, ../sass/_main.scss */
 button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 234, ../sass/_main.scss */
+/* line 237, ../sass/_main.scss */
 button:focus {
   outline: none;
 }
 
-/* line 238, ../sass/_main.scss */
+/* line 241, ../sass/_main.scss */
 .alert {
   margin-top: 1em;
 }
